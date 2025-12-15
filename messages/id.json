@@ -1,0 +1,259 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "services": "Layanan",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Membangun Solusi Digital yang Skalabel untuk Bisnis Modern",
+    "subtitle": "Memberdayakan bisnis Indonesia dengan layanan pengembangan software, konsultasi IT, dan transformasi digital berkelas dunia",
+    "cta": "Konsultasi Gratis",
+    "ctaSecondary": "Lihat Layanan Kami"
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "subtitle": "Solusi digital komprehensif yang disesuaikan dengan kebutuhan bisnis Anda",
+    "itConsulting": {
+      "title": "Konsultasi IT",
+      "description": "Strategi transformasi digital, perancangan arsitektur sistem, konsultasi cloud & infrastruktur, dan perencanaan roadmap teknologi",
+      "features": [
+        "Strategi transformasi digital",
+        "Perancangan arsitektur sistem",
+        "Konsultasi cloud & infrastruktur",
+        "Perencanaan roadmap teknologi"
+      ]
+    },
+    "webDevelopment": {
+      "title": "Pengembangan Aplikasi Web",
+      "description": "Aplikasi web kustom, platform SaaS, sistem enterprise, dan pengembangan API & backend",
+      "features": [
+        "Aplikasi web kustom",
+        "Platform SaaS",
+        "Sistem enterprise",
+        "Pengembangan API & backend"
+      ]
+    },
+    "systemIntegration": {
+      "title": "Integrasi Tools & Sistem",
+      "description": "Integrasi API pihak ketiga, integrasi ERP/CRM, otomatisasi sistem, dan sinkronisasi data",
+      "features": [
+        "Integrasi API pihak ketiga",
+        "Integrasi ERP / CRM",
+        "Otomatisasi sistem",
+        "Sinkronisasi data"
+      ]
+    },
+    "uiUx": {
+      "title": "Desain UI / UX",
+      "description": "Riset pengguna, wireframe & prototipe, sistem desain UI, dan optimasi UX",
+      "features": [
+        "Riset pengguna",
+        "Wireframe & prototipe",
+        "Sistem desain UI",
+        "Optimasi UX"
+      ]
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Optimasi mesin pencari (SEO), performance marketing, analitik & tracking, dan optimasi konversi",
+      "features": [
+        "Optimasi mesin pencari (SEO)",
+        "Performance marketing",
+        "Analitik & tracking",
+        "Optimasi konversi"
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Mengapa Memilih Brevon Solutions",
+    "subtitle": "Kami memberikan solusi tingkat enterprise dengan fokus pada kualitas, performa, dan skalabilitas",
+    "expertise": {
+      "title": "Keahlian Teknis Mendalam",
+      "description": "Tim kami memiliki pengalaman bertahun-tahun dalam teknologi modern dan sistem enterprise"
+    },
+    "quality": {
+      "title": "Pengembangan Berkualitas",
+      "description": "Kami mengikuti praktik terbaik industri dan menjaga standar kualitas kode yang tinggi"
+    },
+    "scalability": {
+      "title": "Dibangun untuk Berkembang",
+      "description": "Solusi kami dirancang untuk tumbuh bersama bisnis Anda"
+    },
+    "support": {
+      "title": "Dukungan Terdedikasi",
+      "description": "Kami menyediakan dukungan dan pemeliharaan berkelanjutan untuk semua solusi kami"
+    }
+  },
+  "techStack": {
+    "title": "Teknologi yang Kami Gunakan",
+    "subtitle": "Kami bekerja dengan teknologi terkini untuk membangun solusi yang tangguh",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "cloud": "Cloud & DevOps",
+    "tools": "Tools & Platform"
+  },
+  "process": {
+    "title": "Proses Kerja Kami",
+    "subtitle": "Metodologi terbukti untuk menghasilkan proyek yang sukses",
+    "discovery": {
+      "title": "Penemuan & Perencanaan",
+      "description": "Kami menganalisis kebutuhan Anda dan membuat roadmap proyek yang detail"
+    },
+    "design": {
+      "title": "Desain & Prototyping",
+      "description": "Membuat wireframe, mockup, dan prototipe interaktif"
+    },
+    "development": {
+      "title": "Pengembangan & Testing",
+      "description": "Membangun solusi dengan pengujian dan quality assurance yang ketat"
+    },
+    "deployment": {
+      "title": "Deployment & Dukungan",
+      "description": "Meluncurkan solusi Anda dan menyediakan pemeliharaan berkelanjutan"
+    }
+  },
+  "cta": {
+    "title": "Siap Mengubah Bisnis Anda?",
+    "subtitle": "Mari diskusikan bagaimana kami dapat membantu Anda mencapai tujuan digital",
+    "button": "Hubungi Kami"
+  },
+  "footer": {
+    "company": "Brevon Solutions",
+    "tagline": "Membangun Solusi Digital yang Skalabel",
+    "quickLinks": "Tautan Cepat",
+    "ourServices": "Layanan Kami",
+    "legal": "Legal",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "contact": "Kontak",
+    "email": "info@brevonsolutions.com",
+    "location": "Indonesia",
+    "copyright": "© 2024 Brevon Solutions. Hak cipta dilindungi."
+  },
+  "about": {
+    "title": "Tentang Brevon Solutions",
+    "subtitle": "Mitra Terpercaya dalam Transformasi Digital",
+    "description": "Brevon Solutions adalah perusahaan software berbasis di Indonesia yang menyediakan solusi digital end-to-end. Kami mengkhususkan diri dalam konsultasi IT, pengembangan aplikasi web, integrasi sistem, desain UI/UX, dan layanan digital marketing.",
+    "mission": {
+      "title": "Misi Kami",
+      "description": "Memberdayakan bisnis dengan solusi teknologi inovatif yang mendorong pertumbuhan dan efisiensi"
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "description": "Menjadi penyedia solusi software terkemuka di Indonesia, dikenal karena keunggulan dan inovasi"
+    },
+    "values": {
+      "title": "Nilai-Nilai Kami",
+      "quality": {
+        "title": "Kualitas Utama",
+        "description": "Kami tidak pernah berkompromi dengan kualitas"
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Terus mengeksplorasi teknologi baru"
+      },
+      "integrity": {
+        "title": "Integritas",
+        "description": "Jujur dan transparan dalam semua urusan"
+      },
+      "excellence": {
+        "title": "Keunggulan",
+        "description": "Berusaha mencapai keunggulan dalam segala hal"
+      }
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Punya proyek? Mari bicara tentang bagaimana kami dapat membantu",
+    "form": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "Nomor Telepon",
+      "company": "Nama Perusahaan",
+      "message": "Pesan Anda",
+      "submit": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": "Terima kasih! Kami akan segera menghubungi Anda.",
+      "error": "Terjadi kesalahan. Silakan coba lagi."
+    },
+    "info": {
+      "title": "Informasi Kontak",
+      "email": "info@brevonsolutions.com",
+      "location": "Indonesia",
+      "hours": "Senin - Jumat: 09:00 - 18:00 WIB"
+    }
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Terakhir diperbarui: Desember 2024",
+    "intro": "Di Brevon Solutions, kami sangat menjaga privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.",
+    "sections": {
+      "collection": {
+        "title": "Informasi yang Kami Kumpulkan",
+        "content": "Kami mengumpulkan informasi yang Anda berikan langsung kepada kami, seperti ketika Anda mengisi formulir kontak, meminta konsultasi, atau berkomunikasi dengan kami."
+      },
+      "usage": {
+        "title": "Bagaimana Kami Menggunakan Informasi Anda",
+        "content": "Kami menggunakan informasi yang kami kumpulkan untuk menyediakan, memelihara, dan meningkatkan layanan kami, untuk berkomunikasi dengan Anda, dan untuk mematuhi kewajiban hukum."
+      },
+      "protection": {
+        "title": "Perlindungan Data",
+        "content": "Kami menerapkan langkah-langkah teknis dan organisasi yang sesuai untuk melindungi informasi pribadi Anda dari akses, perubahan, pengungkapan, atau penghancuran yang tidak sah."
+      },
+      "sharing": {
+        "title": "Berbagi Informasi",
+        "content": "Kami tidak menjual, menukar, atau mentransfer informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali jika diwajibkan oleh hukum."
+      }
+    }
+  },
+  "terms": {
+    "title": "Syarat Layanan",
+    "lastUpdated": "Terakhir diperbarui: Desember 2024",
+    "intro": "Syarat Layanan ini mengatur penggunaan Anda terhadap situs web dan layanan Brevon Solutions. Dengan mengakses atau menggunakan layanan kami, Anda setuju untuk terikat dengan syarat-syarat ini.",
+    "sections": {
+      "services": {
+        "title": "Layanan Kami",
+        "content": "Brevon Solutions menyediakan pengembangan software, konsultasi IT, dan layanan digital seperti yang dijelaskan di situs web kami. Kami berhak untuk memodifikasi atau menghentikan layanan kapan saja."
+      },
+      "obligations": {
+        "title": "Kewajiban Pengguna",
+        "content": "Anda setuju untuk menggunakan layanan kami hanya untuk tujuan yang sah dan sesuai dengan Syarat ini. Anda bertanggung jawab untuk menjaga kerahasiaan informasi akun apa pun."
+      },
+      "intellectual": {
+        "title": "Kekayaan Intelektual",
+        "content": "Semua konten, fitur, dan fungsi layanan kami dimiliki oleh Brevon Solutions dan dilindungi oleh hukum hak cipta, merek dagang, dan kekayaan intelektual internasional lainnya."
+      },
+      "limitation": {
+        "title": "Batasan Tanggung Jawab",
+        "content": "Brevon Solutions tidak bertanggung jawab atas kerusakan tidak langsung, insidental, khusus, konsekuensial, atau punitif yang dihasilkan dari penggunaan layanan kami."
+      }
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Brevon Solutions - Membangun Solusi Digital yang Skalabel untuk Bisnis Modern",
+      "description": "Perusahaan software Indonesia yang menyediakan konsultasi IT, pengembangan aplikasi web, integrasi sistem, desain UI/UX, dan layanan digital marketing."
+    },
+    "about": {
+      "title": "Tentang Kami - Brevon Solutions",
+      "description": "Pelajari tentang Brevon Solutions, mitra terpercaya Anda dalam transformasi digital. Kami menghadirkan solusi software tingkat enterprise di seluruh Indonesia."
+    },
+    "services": {
+      "title": "Layanan Kami - Brevon Solutions",
+      "description": "Solusi digital komprehensif termasuk konsultasi IT, pengembangan web, integrasi sistem, desain UI/UX, dan layanan digital marketing."
+    },
+    "contact": {
+      "title": "Hubungi Kami - Brevon Solutions",
+      "description": "Hubungi Brevon Solutions. Minta konsultasi untuk proyek digital Anda berikutnya."
+    },
+    "privacy": {
+      "title": "Kebijakan Privasi - Brevon Solutions",
+      "description": "Baca kebijakan privasi kami untuk memahami bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda."
+    },
+    "terms": {
+      "title": "Syarat Layanan - Brevon Solutions",
+      "description": "Tinjau syarat dan ketentuan untuk menggunakan situs web dan layanan Brevon Solutions."
+    }
+  }
+}

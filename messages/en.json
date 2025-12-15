@@ -1,0 +1,259 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building Scalable Digital Solutions for Modern Businesses",
+    "subtitle": "Empowering Indonesian businesses with world-class software development, IT consulting, and digital transformation services",
+    "cta": "Request a Consultation",
+    "ctaSecondary": "View Our Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive digital solutions tailored to your business needs",
+    "itConsulting": {
+      "title": "IT Consulting",
+      "description": "Digital transformation strategy, system architecture design, cloud & infrastructure consulting, and technology roadmap planning",
+      "features": [
+        "Digital transformation strategy",
+        "System architecture design",
+        "Cloud & infrastructure consulting",
+        "Technology roadmap planning"
+      ]
+    },
+    "webDevelopment": {
+      "title": "Web Application Development",
+      "description": "Custom web applications, SaaS platforms, enterprise systems, and API & backend development",
+      "features": [
+        "Custom web applications",
+        "SaaS platforms",
+        "Enterprise systems",
+        "API & backend development"
+      ]
+    },
+    "systemIntegration": {
+      "title": "Tools & System Integration",
+      "description": "Third-party API integration, ERP/CRM integration, automation & workflow tools, and data synchronization",
+      "features": [
+        "Third-party API integration",
+        "ERP / CRM integration",
+        "Automation & workflow tools",
+        "Data synchronization"
+      ]
+    },
+    "uiUx": {
+      "title": "UI / UX Design",
+      "description": "User research, wireframing & prototyping, UI design systems, and UX optimization",
+      "features": [
+        "User research",
+        "Wireframing & prototyping",
+        "UI design systems",
+        "UX optimization"
+      ]
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Search engine optimization (SEO), performance marketing, analytics & tracking, and conversion optimization",
+      "features": [
+        "Search engine optimization (SEO)",
+        "Performance marketing",
+        "Analytics & tracking",
+        "Conversion optimization"
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Brevon Solutions",
+    "subtitle": "We deliver enterprise-grade solutions with a focus on quality, performance, and scalability",
+    "expertise": {
+      "title": "Deep Technical Expertise",
+      "description": "Our team brings years of experience in modern technologies and enterprise systems"
+    },
+    "quality": {
+      "title": "Quality-Driven Development",
+      "description": "We follow industry best practices and maintain high code quality standards"
+    },
+    "scalability": {
+      "title": "Built for Scale",
+      "description": "Our solutions are designed to grow with your business"
+    },
+    "support": {
+      "title": "Dedicated Support",
+      "description": "We provide ongoing support and maintenance for all our solutions"
+    }
+  },
+  "techStack": {
+    "title": "Technology Stack",
+    "subtitle": "We work with cutting-edge technologies to build robust solutions",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "cloud": "Cloud & DevOps",
+    "tools": "Tools & Platforms"
+  },
+  "process": {
+    "title": "Our Work Process",
+    "subtitle": "A proven methodology for delivering successful projects",
+    "discovery": {
+      "title": "Discovery & Planning",
+      "description": "We analyze your requirements and create a detailed project roadmap"
+    },
+    "design": {
+      "title": "Design & Prototyping",
+      "description": "Creating wireframes, mockups, and interactive prototypes"
+    },
+    "development": {
+      "title": "Development & Testing",
+      "description": "Building the solution with rigorous testing and quality assurance"
+    },
+    "deployment": {
+      "title": "Deployment & Support",
+      "description": "Launching your solution and providing ongoing maintenance"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Let's discuss how we can help you achieve your digital goals",
+    "button": "Get in Touch"
+  },
+  "footer": {
+    "company": "Brevon Solutions",
+    "tagline": "Building Scalable Digital Solutions",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "email": "info@brevonsolutions.com",
+    "location": "Indonesia",
+    "copyright": "© 2024 Brevon Solutions. All rights reserved."
+  },
+  "about": {
+    "title": "About Brevon Solutions",
+    "subtitle": "Your Trusted Partner in Digital Transformation",
+    "description": "Brevon Solutions is an Indonesian-based software company providing end-to-end digital solutions. We specialize in IT consulting, web application development, system integration, UI/UX design, and digital marketing services.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with innovative technology solutions that drive growth and efficiency"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading software solutions provider in Indonesia, recognized for excellence and innovation"
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality First",
+        "description": "We never compromise on quality"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Constantly exploring new technologies"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Honest and transparent in all dealings"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Striving for excellence in everything we do"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? Let's talk about how we can help",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "info@brevonsolutions.com",
+      "location": "Indonesia",
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM WIB"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: December 2024",
+    "intro": "At Brevon Solutions, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information.",
+    "sections": {
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, such as when you fill out a contact form, request a consultation, or communicate with us."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to provide, maintain, and improve our services, to communicate with you, and to comply with legal obligations."
+      },
+      "protection": {
+        "title": "Data Protection",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+      },
+      "sharing": {
+        "title": "Information Sharing",
+        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: December 2024",
+    "intro": "These Terms of Service govern your use of Brevon Solutions' website and services. By accessing or using our services, you agree to be bound by these terms.",
+    "sections": {
+      "services": {
+        "title": "Our Services",
+        "content": "Brevon Solutions provides software development, IT consulting, and digital services as described on our website. We reserve the right to modify or discontinue services at any time."
+      },
+      "obligations": {
+        "title": "User Obligations",
+        "content": "You agree to use our services only for lawful purposes and in accordance with these Terms. You are responsible for maintaining the confidentiality of any account information."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "All content, features, and functionality of our services are owned by Brevon Solutions and are protected by international copyright, trademark, and other intellectual property laws."
+      },
+      "limitation": {
+        "title": "Limitation of Liability",
+        "content": "Brevon Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services."
+      }
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Brevon Solutions - Building Scalable Digital Solutions for Modern Businesses",
+      "description": "Indonesian software company providing IT consulting, web application development, system integration, UI/UX design, and digital marketing services."
+    },
+    "about": {
+      "title": "About Us - Brevon Solutions",
+      "description": "Learn about Brevon Solutions, your trusted partner in digital transformation. We deliver enterprise-grade software solutions across Indonesia."
+    },
+    "services": {
+      "title": "Our Services - Brevon Solutions",
+      "description": "Comprehensive digital solutions including IT consulting, web development, system integration, UI/UX design, and digital marketing services."
+    },
+    "contact": {
+      "title": "Contact Us - Brevon Solutions",
+      "description": "Get in touch with Brevon Solutions. Request a consultation for your next digital project."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Brevon Solutions",
+      "description": "Read our privacy policy to understand how we collect, use, and protect your personal information."
+    },
+    "terms": {
+      "title": "Terms of Service - Brevon Solutions",
+      "description": "Review the terms and conditions for using Brevon Solutions' website and services."
+    }
+  }
+}
