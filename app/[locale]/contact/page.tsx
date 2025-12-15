@@ -32,10 +32,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
               {t('title')}
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-400">
+            <p className="mt-6 text-xl leading-8 text-gray-400 animate-fade-in">
               {t('subtitle')}
             </p>
           </div>

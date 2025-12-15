@@ -6,6 +6,9 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FloatingChat from '@/components/FloatingChat';
+import ScrollToTop from '@/components/ScrollToTop';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -33,13 +36,16 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${jakartaSans.variable} font-sans antialiased`}>
+      <body className={`${jakartaSans.variable} font-sans antialiased bg-gray-900`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
+          <Breadcrumb />
           <main className="min-h-screen">
             {children}
           </main>
           <Footer />
+          <FloatingChat />
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>

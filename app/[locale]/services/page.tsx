@@ -112,14 +112,14 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm animate-fade-in">
               <Sparkles className="h-4 w-4" />
               <span>Our Expertise</span>
             </div>
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
               {t('title')}
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-300">
+            <p className="mt-6 text-xl leading-8 text-gray-300 animate-fade-in">
               {t('subtitle')}
             </p>
           </div>

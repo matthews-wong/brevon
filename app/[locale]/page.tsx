@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { ArrowRight, Code, Palette, Zap, Shield, CheckCircle, Sparkles, Layers, Cpu, Workflow, TrendingUp } from 'lucide-react';
+import { ArrowRight, Code, Palette, Zap, Shield, CheckCircle, Sparkles, Layers, Cpu, Workflow, TrendingUp, HelpCircle } from 'lucide-react';
+import FAQ from '@/components/FAQ';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -53,23 +54,23 @@ function HeroSection({ locale }: { locale: string }) {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm animate-fade-in">
             <Sparkles className="h-4 w-4" />
             <span>Enterprise-Grade Digital Solutions</span>
           </div>
 
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
+          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl animate-fade-in">
             <span className="block">{t('title').split(' ').slice(0, 2).join(' ')}</span>
             <span className="block mt-2 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
               {t('title').split(' ').slice(2).join(' ')}
             </span>
           </h1>
 
-          <p className="mt-6 text-xl leading-8 text-gray-300 max-w-3xl mx-auto">
+          <p className="mt-6 text-xl leading-8 text-gray-300 max-w-3xl mx-auto animate-fade-in">
             {t('subtitle')}
           </p>
 
-          <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
+          <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap animate-fade-in">
             <Link
               href={`/${locale}/contact`}
               className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105"
@@ -87,7 +88,7 @@ function HeroSection({ locale }: { locale: string }) {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 animate-fade-in">
             {[
               { value: '100+', label: 'Projects Delivered' },
               { value: '50+', label: 'Happy Clients' },
@@ -153,14 +154,14 @@ function ServicesSection({ locale }: { locale: string }) {
     <section className="py-24 sm:py-32 bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-400/30">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-400/30 animate-fade-in">
             <Layers className="h-4 w-4" />
             <span>Our Services</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400">
+          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
             {t('subtitle')}
           </p>
         </div>
@@ -169,7 +170,7 @@ function ServicesSection({ locale }: { locale: string }) {
             <Link
               key={service.name}
               href={service.href}
-              className="group relative flex flex-col overflow-hidden rounded-3xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-gray-600"
+              className="group relative flex flex-col overflow-hidden rounded-3xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-gray-600 animate-scale-in"
             >
               {/* Gradient Background on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -235,21 +236,21 @@ function WhyUsSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-500/20">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-500/20 animate-fade-in">
             <Sparkles className="h-4 w-4" />
             <span>Why Choose Us</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400">
+          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
             {t('subtitle')}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {features.map((feature) => (
-              <div key={feature.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 p-8 backdrop-blur-sm hover:bg-gray-800/70 transition-all border border-gray-700 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20">
+              <div key={feature.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 p-8 backdrop-blur-sm hover:bg-gray-800/70 transition-all border border-gray-700 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 animate-slide-up">
                 <dt className="flex items-center gap-x-3 text-xl font-semibold leading-7 text-white">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 shadow-lg shadow-blue-500/50 group-hover:scale-110 transition-transform">
                     <feature.icon className="h-6 w-6 text-white" />
@@ -298,20 +299,20 @@ function TechStackSection() {
     <section className="py-24 sm:py-32 bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-400 mb-4 ring-1 ring-indigo-400/30">
+          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-400 mb-4 ring-1 ring-indigo-400/30 animate-fade-in">
             <Code className="h-4 w-4" />
             <span>Technology</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400">
+          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
             {t('subtitle')}
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-4">
           {techCategories.map((category) => (
-            <div key={category.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 transition-all border border-gray-700 hover:border-gray-600">
+            <div key={category.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 transition-all border border-gray-700 hover:border-gray-600 animate-scale-in">
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
               <h3 className={`relative text-lg font-semibold bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent mb-6`}>
                 {category.name}
@@ -366,21 +367,21 @@ function ProcessSection() {
     <section className="py-24 sm:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-400 mb-4 ring-1 ring-purple-400/30">
+          <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-400 mb-4 ring-1 ring-purple-400/30 animate-fade-in">
             <Workflow className="h-4 w-4" />
             <span>Our Process</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400">
+          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
             {t('subtitle')}
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:max-w-none">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
             {steps.map((step, index) => (
-              <div key={step.name} className="relative flex flex-col">
+              <div key={step.name} className="relative flex flex-col animate-slide-up">
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-blue-500/30 to-transparent -translate-x-4"></div>
@@ -412,6 +413,57 @@ function ProcessSection() {
   );
 }
 
+function FAQSection({ locale }: { locale: string }) {
+  const faqItems = [
+    {
+      question: locale === 'id' ? 'Apa saja layanan yang ditawarkan Brevon Solutions?' : 'What services does Brevon Solutions offer?',
+      answer: locale === 'id'
+        ? 'Kami menawarkan berbagai layanan termasuk Konsultasi IT, Pengembangan Aplikasi Web, Integrasi Sistem, Desain UI/UX, dan Digital Marketing. Setiap layanan disesuaikan dengan kebutuhan spesifik bisnis Anda.'
+        : 'We offer a range of services including IT Consulting, Web Application Development, System Integration, UI/UX Design, and Digital Marketing. Each service is tailored to your specific business needs.',
+    },
+    {
+      question: locale === 'id' ? 'Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek?' : 'How long does it take to complete a project?',
+      answer: locale === 'id'
+        ? 'Durasi proyek bervariasi tergantung pada kompleksitas dan ruang lingkup. Proyek sederhana mungkin memakan waktu 4-6 minggu, sementara solusi enterprise yang kompleks dapat memakan waktu 3-6 bulan. Kami akan memberikan timeline yang jelas selama konsultasi awal.'
+        : 'Project duration varies depending on complexity and scope. Simple projects may take 4-6 weeks, while complex enterprise solutions can take 3-6 months. We provide a clear timeline during the initial consultation.',
+    },
+    {
+      question: locale === 'id' ? 'Apakah Brevon Solutions menyediakan dukungan setelah proyek selesai?' : 'Does Brevon Solutions provide support after project completion?',
+      answer: locale === 'id'
+        ? 'Ya, kami menyediakan dukungan dan pemeliharaan berkelanjutan untuk semua proyek kami. Kami menawarkan berbagai paket dukungan untuk memastikan solusi Anda tetap berfungsi optimal dan up-to-date.'
+        : 'Yes, we provide ongoing support and maintenance for all our projects. We offer various support packages to ensure your solution stays optimal and up-to-date.',
+    },
+    {
+      question: locale === 'id' ? 'Bagaimana cara memulai proyek dengan Brevon Solutions?' : 'How do I get started with a project?',
+      answer: locale === 'id'
+        ? 'Memulai sangat mudah! Hubungi kami melalui formulir kontak, email, atau WhatsApp. Kami akan menjadwalkan konsultasi gratis untuk memahami kebutuhan Anda dan memberikan proposal yang disesuaikan.'
+        : 'Getting started is easy! Contact us through our contact form, email, or WhatsApp. We\'ll schedule a free consultation to understand your needs and provide a tailored proposal.',
+    },
+  ];
+
+  return (
+    <section className="py-24 sm:py-32 bg-gray-900">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-400 ring-1 ring-indigo-400/30 animate-fade-in">
+            <HelpCircle className="h-4 w-4" />
+            <span>FAQ</span>
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+            {locale === 'id' ? 'Pertanyaan yang Sering Diajukan' : 'Frequently Asked Questions'}
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
+            {locale === 'id' ? 'Temukan jawaban untuk pertanyaan umum tentang layanan kami' : 'Find answers to common questions about our services'}
+          </p>
+        </div>
+        <div className="animate-slide-up">
+          <FAQ items={faqItems} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CTASection({ locale }: { locale: string }) {
   const t = useTranslations('cta');
 
@@ -426,13 +478,13 @@ function CTASection({ locale }: { locale: string }) {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
             {t('title')}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100 animate-fade-in">
             {t('subtitle')}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in">
             <Link
               href={`/${locale}/contact`}
               className="group relative inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:scale-105"
@@ -457,6 +509,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <WhyUsSection />
       <TechStackSection />
       <ProcessSection />
+      <FAQSection locale={locale} />
       <CTASection locale={locale} />
     </>
   );

@@ -77,14 +77,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm animate-fade-in">
               <Heart className="h-4 w-4" />
               <span>Our Story</span>
             </div>
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
               {t('title')}
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-300">
+            <p className="mt-6 text-xl leading-8 text-gray-300 animate-fade-in">
               {t('subtitle')}
             </p>
           </div>
@@ -109,10 +109,10 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl animate-fade-in">
               Our Achievements
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-400">
+            <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
               Numbers that speak for our commitment to excellence
             </p>
           </div>
@@ -120,7 +120,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {achievements.map((achievement) => (
               <div
                 key={achievement.label}
-                className="group relative flex flex-col items-center text-center rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 hover:border-gray-600 transition-all hover:shadow-lg hover:shadow-blue-500/20"
+                className="group relative flex flex-col items-center text-center rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 hover:border-gray-600 transition-all hover:shadow-lg hover:shadow-blue-500/20 animate-scale-in"
               >
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${achievement.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
                 <div className={`relative text-4xl font-bold bg-gradient-to-r ${achievement.gradient} bg-clip-text text-transparent mb-2`}>
@@ -178,14 +178,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="py-24 sm:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-400 ring-1 ring-purple-400/30">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-400 ring-1 ring-purple-400/30 animate-fade-in">
               <Award className="h-4 w-4" />
               <span>Core Values</span>
             </div>
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
               {t('values.title')}
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-400">
+            <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
               The principles that guide everything we do
             </p>
           </div>
@@ -193,7 +193,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {values.map((value, index) => (
               <div
                 key={value.name}
-                className="group relative flex flex-col rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 hover:border-gray-600 transition-all hover:shadow-xl hover:shadow-blue-500/20"
+                className="group relative flex flex-col rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 hover:border-gray-600 transition-all hover:shadow-xl hover:shadow-blue-500/20 animate-slide-up"
               >
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${value.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
                 <div className="relative">
