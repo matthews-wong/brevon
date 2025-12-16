@@ -19,7 +19,7 @@ export default function FloatingChat() {
     <>
       {/* Chat Options Menu */}
       {isOpen && (
-        <div className="fixed bottom-24 left-8 z-50 flex flex-col gap-3 animate-slide-up">
+        <div className="fixed bottom-24 right-8 z-50 flex flex-col gap-3 animate-slide-up">
           <button
             onClick={handleWhatsApp}
             className="group flex items-center gap-3 rounded-full bg-green-600 px-6 py-3 text-white shadow-lg hover:bg-green-500 hover:shadow-xl transition-all hover:scale-105"
@@ -47,7 +47,7 @@ export default function FloatingChat() {
       {/* Main Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 left-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/60 hover:scale-110"
+        className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg shadow-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/60 hover:scale-110"
         aria-label="Open chat"
       >
         {isOpen ? (
