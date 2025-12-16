@@ -7,7 +7,6 @@ import "../globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingChat from '@/components/FloatingChat';
-import ScrollToTop from '@/components/ScrollToTop';
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -43,7 +42,6 @@ export default async function LocaleLayout({
           </main>
           <Footer />
           <FloatingChat />
-          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>
