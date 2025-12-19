@@ -54,6 +54,7 @@ export default async function UIUXPage({ params }: { params: Promise<{ locale: s
         },
       ]}
       gradient="from-purple-500 to-pink-500"
+      heroImage="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000"
     />
   );
 }

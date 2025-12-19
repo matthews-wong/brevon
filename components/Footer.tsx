@@ -34,11 +34,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4 flex items-center gap-2">
-              <div className="relative bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white font-bold text-lg px-2.5 py-1.5 rounded-lg">
+              <div className="bg-blue-600 text-white font-bold text-lg px-2.5 py-1.5 rounded-lg">
                 B
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold text-blue-400">
                   Brevon
                 </span>
                 <span className="text-2xl font-bold text-white">Solutions</span>

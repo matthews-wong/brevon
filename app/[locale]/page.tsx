@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { ArrowRight, Code, Palette, Zap, Shield, CheckCircle, Sparkles, Layers, Cpu, Workflow, TrendingUp, HelpCircle } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Code, Palette, Zap, Shield, CheckCircle, Layers, Cpu, Workflow, TrendingUp, HelpCircle, Users, Target, Award } from 'lucide-react';
 import FAQ from '@/components/FAQ';
 import type { Metadata } from 'next';
 
@@ -40,68 +41,107 @@ function HeroSection({ locale }: { locale: string }) {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-20 sm:py-32">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20"></div>
+    <section className="relative bg-white">
+      {/* Hero Image with Overlay */}
+      <div className="relative h-[500px] sm:h-[600px] lg:h-[700px]">
+        <Image
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000"
+          alt="Modern office workspace"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/70"></div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        {/* Content */}
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="max-w-3xl w-full">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-600/20 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-blue-300 mb-4 sm:mb-6 backdrop-blur-sm border border-blue-500/30">
+              <Award className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span className="hidden sm:inline">Enterprise-Grade Digital Solutions</span>
+              <span className="sm:hidden">Digital Solutions</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4 sm:mb-6 leading-tight">
+              {t('title')}
+            </h1>
+
+            <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-200 mb-6 sm:mb-10 max-w-2xl">
+              {t('subtitle')}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
+              >
+                <span>{t('cta')}</span>
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+              </Link>
+              <Link
+                href={`/${locale}/services`}
+                className="inline-flex items-center justify-center gap-2 rounded-xl px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white ring-1 ring-white/30 hover:bg-white/10 transition-colors"
+              >
+                {t('ctaSecondary')}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+          </div>
+        </div>
       </div>
+    </section>
+  );
+}
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm animate-fade-in">
-            <Sparkles className="h-4 w-4" />
-            <span>Enterprise-Grade Digital Solutions</span>
+function AboutSection({ locale }: { locale: string }) {
+  return (
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000"
+              alt="Team collaboration"
+              fill
+              className="object-cover"
+            />
           </div>
 
-          <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl animate-fade-in">
-            <span className="block">{t('title').split(' ').slice(0, 2).join(' ')}</span>
-            <span className="block mt-2 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              {t('title').split(' ').slice(2).join(' ')}
-            </span>
-          </h1>
-
-          <p className="mt-6 text-xl leading-8 text-gray-300 max-w-3xl mx-auto animate-fade-in">
-            {t('subtitle')}
-          </p>
-
-          <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap animate-fade-in">
-            <Link
-              href={`/${locale}/contact`}
-              className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105"
-            >
-              <span>{t('cta')}</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href={`/${locale}/services`}
-              className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-gray-300 ring-1 ring-inset ring-gray-600 hover:ring-gray-500 hover:bg-gray-800/50 transition-all backdrop-blur-sm"
-            >
-              {t('ctaSecondary')}
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 animate-fade-in">
-            {[
-              { value: '100+', label: 'Projects Delivered' },
-              { value: '50+', label: 'Happy Clients' },
-              { value: '5+', label: 'Years Experience' },
-              { value: '24/7', label: 'Support' },
-            ].map((stat) => (
-              <div key={stat.label} className="flex flex-col group">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-indigo-300 transition-all">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-blue-700 mb-3 sm:mb-4">
+              <Target className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span>About Us</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 mb-4 sm:mb-6 leading-tight">
+              {locale === 'id' ? 'Mitra Terpercaya untuk Transformasi Digital Anda' : 'Your Trusted Partner for Digital Transformation'}
+            </h2>
+            <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p>
+                {locale === 'id'
+                  ? 'Brevon Solutions adalah perusahaan software dan IT consulting berbasis di Indonesia yang berfokus pada pengembangan solusi digital berkualitas tinggi untuk bisnis modern.'
+                  : 'Brevon Solutions is an Indonesia-based software and IT consulting company focused on developing high-quality digital solutions for modern businesses.'}
+              </p>
+              <p>
+                {locale === 'id'
+                  ? 'Kami membantu perusahaan dari berbagai industri untuk mengoptimalkan proses bisnis mereka melalui teknologi yang tepat, desain yang user-centric, dan strategi digital yang efektif.'
+                  : 'We help companies across industries optimize their business processes through the right technology, user-centric design, and effective digital strategies.'}
+              </p>
+            </div>
+            <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-3 sm:gap-6">
+              <div className="text-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 mx-auto mb-1 sm:mb-2" />
+                <div className="text-xs sm:text-sm font-semibold text-gray-900">Expert Team</div>
               </div>
-            ))}
+              <div className="text-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <Award className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 mx-auto mb-1 sm:mb-2" />
+                <div className="text-xs sm:text-sm font-semibold text-gray-900">Quality Focus</div>
+              </div>
+              <div className="text-center p-3 sm:p-4 bg-white rounded-lg shadow-sm">
+                <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 mx-auto mb-1 sm:mb-2" />
+                <div className="text-xs sm:text-sm font-semibold text-gray-900">Reliable Support</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -117,83 +157,87 @@ function ServicesSection({ locale }: { locale: string }) {
       name: t('itConsulting.title'),
       description: t('itConsulting.description'),
       icon: Zap,
-      gradient: 'from-yellow-500 to-orange-500',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000',
       href: `/${locale}/services/it-consulting`,
     },
     {
       name: t('webDevelopment.title'),
       description: t('webDevelopment.description'),
       icon: Code,
-      gradient: 'from-blue-500 to-cyan-500',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000',
       href: `/${locale}/services/web-development`,
     },
     {
       name: t('systemIntegration.title'),
       description: t('systemIntegration.description'),
       icon: Workflow,
-      gradient: 'from-green-500 to-emerald-500',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000',
       href: `/${locale}/services/system-integration`,
     },
     {
       name: t('uiUx.title'),
       description: t('uiUx.description'),
       icon: Palette,
-      gradient: 'from-purple-500 to-pink-500',
+      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000',
       href: `/${locale}/services/ui-ux`,
     },
     {
       name: t('digitalMarketing.title'),
       description: t('digitalMarketing.description'),
       icon: TrendingUp,
-      gradient: 'from-red-500 to-rose-500',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000',
       href: `/${locale}/services/digital-marketing`,
     },
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-gray-900">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-400/30 animate-fade-in">
-            <Layers className="h-4 w-4" />
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-blue-700 mb-3 sm:mb-4">
+            <Layers className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>Our Services</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
+          <p className="text-base sm:text-lg text-gray-600">
             {t('subtitle')}
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Link
               key={service.name}
               href={service.href}
-              className="group relative flex flex-col overflow-hidden rounded-3xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-gray-600 animate-scale-in"
+              className="group relative flex flex-col overflow-hidden rounded-xl bg-white border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-xl transition-all"
             >
-              {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-
-              <div className="relative">
-                <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg shadow-${service.gradient.split('-')[1]}-500/50`}>
-                  <service.icon className="h-7 w-7 text-white" aria-hidden="true" />
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 shadow-lg">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
                 </div>
-                <h3 className="mt-6 text-xl font-semibold leading-7 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-indigo-400 group-hover:bg-clip-text transition-all">
+              </div>
+
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.name}
                 </h3>
-                <p className="mt-3 text-base leading-7 text-gray-400 line-clamp-3">
+                <p className="text-base text-gray-600 mb-4 flex-1">
                   {service.description}
                 </p>
-              </div>
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-blue-400 group-hover:gap-3 transition-all">
-                <span>Learn more</span>
-                <ArrowRight className="h-4 w-4" />
-              </div>
-
-              {/* Number Badge */}
-              <div className="absolute top-6 right-6 text-6xl font-bold text-gray-800 group-hover:text-gray-700 transition-colors">
-                0{index + 1}
+                <div className="flex items-center gap-2 text-sm font-semibold text-blue-600 group-hover:gap-3 transition-all">
+                  <span>Learn more</span>
+                  <ArrowRight className="h-4 w-4" />
+                </div>
               </div>
             </Link>
           ))}
@@ -230,101 +274,34 @@ function WhyUsSection() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 mb-4 ring-1 ring-blue-500/20 animate-fade-in">
-            <Sparkles className="h-4 w-4" />
+    <section className="py-24 bg-gray-50">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 mb-4">
+            <Award className="h-4 w-4" />
             <span>Why Choose Us</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
+          <p className="text-lg text-gray-600">
             {t('subtitle')}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {features.map((feature) => (
-              <div key={feature.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 p-8 backdrop-blur-sm hover:bg-gray-800/70 transition-all border border-gray-700 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 animate-slide-up">
-                <dt className="flex items-center gap-x-3 text-xl font-semibold leading-7 text-white">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 shadow-lg shadow-blue-500/50 group-hover:scale-110 transition-transform">
-                    <feature.icon className="h-6 w-6 text-white" />
-                  </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {features.map((feature) => (
+            <div key={feature.name} className="relative flex flex-col bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 shadow-sm">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">
                   {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-400">
-                  <p className="flex-auto">{feature.description}</p>
-                </dd>
+                </h3>
               </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TechStackSection() {
-  const t = useTranslations('techStack');
-
-  const techCategories = [
-    {
-      name: t('frontend'),
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js'],
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      name: t('backend'),
-      technologies: ['Node.js', 'Python', 'Go', 'PostgreSQL', 'MongoDB'],
-      gradient: 'from-green-500 to-emerald-500',
-    },
-    {
-      name: t('cloud'),
-      technologies: ['AWS', 'Google Cloud', 'Docker', 'Kubernetes', 'Vercel'],
-      gradient: 'from-purple-500 to-pink-500',
-    },
-    {
-      name: t('tools'),
-      technologies: ['Git', 'Figma', 'Jira', 'Analytics', 'CI/CD'],
-      gradient: 'from-orange-500 to-red-500',
-    },
-  ];
-
-  return (
-    <section className="py-24 sm:py-32 bg-gray-900">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-400 mb-4 ring-1 ring-indigo-400/30 animate-fade-in">
-            <Code className="h-4 w-4" />
-            <span>Technology</span>
-          </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
-            {t('title')}
-          </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
-            {t('subtitle')}
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          {techCategories.map((category) => (
-            <div key={category.name} className="group relative flex flex-col rounded-2xl bg-gray-800/50 backdrop-blur-sm p-8 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 transition-all border border-gray-700 hover:border-gray-600 animate-scale-in">
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-              <h3 className={`relative text-lg font-semibold bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent mb-6`}>
-                {category.name}
-              </h3>
-              <ul className="relative space-y-3">
-                {category.technologies.map((tech) => (
-                  <li key={tech} className="flex items-center gap-3 text-gray-400 group/item hover:text-gray-300 transition-colors">
-                    <div className={`h-2 w-2 rounded-full bg-gradient-to-r ${category.gradient} group-hover/item:scale-125 transition-transform`}></div>
-                    <span className="text-sm font-medium">{tech}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-base text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
@@ -332,6 +309,7 @@ function TechStackSection() {
     </section>
   );
 }
+
 
 function ProcessSection() {
   const t = useTranslations('process');
@@ -341,7 +319,7 @@ function ProcessSection() {
       name: t('discovery.title'),
       description: t('discovery.description'),
       step: '01',
-      icon: Sparkles,
+      icon: Target,
     },
     {
       name: t('design.title'),
@@ -364,49 +342,46 @@ function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <section className="py-24 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-sm font-semibold text-purple-400 mb-4 ring-1 ring-purple-400/30 animate-fade-in">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700 mb-4">
             <Workflow className="h-4 w-4" />
             <span>Our Process</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
+          <p className="text-lg text-gray-600">
             {t('subtitle')}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-            {steps.map((step, index) => (
-              <div key={step.name} className="relative flex flex-col animate-slide-up">
-                {/* Connector Line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-blue-500/30 to-transparent -translate-x-4"></div>
-                )}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <div key={step.name} className="relative flex flex-col">
+              {/* Connector Line */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-16 left-[calc(100%-2rem)] w-full h-0.5 bg-blue-200"></div>
+              )}
 
-                <div className="group relative flex flex-col items-center text-center">
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                    <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 shadow-xl shadow-blue-500/50">
-                      <step.icon className="h-10 w-10 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm font-bold text-blue-400 shadow-lg ring-4 ring-gray-800">
-                      {step.step}
-                    </div>
+              <div className="relative flex flex-col items-center text-center bg-white rounded-xl p-8 border border-gray-200">
+                <div className="relative mb-6">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 shadow-lg">
+                    <step.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {step.name}
-                  </h3>
-                  <p className="text-base text-gray-400">
-                    {step.description}
-                  </p>
+                  <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm font-bold text-white shadow-lg">
+                    {step.step}
+                  </div>
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {step.name}
+                </h3>
+                <p className="text-base text-gray-600">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -442,23 +417,21 @@ function FAQSection({ locale }: { locale: string }) {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-gray-900">
+    <section className="py-24 bg-white">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm font-semibold text-indigo-400 ring-1 ring-indigo-400/30 animate-fade-in">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
             <HelpCircle className="h-4 w-4" />
             <span>FAQ</span>
           </div>
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
             {locale === 'id' ? 'Pertanyaan yang Sering Diajukan' : 'Frequently Asked Questions'}
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400 animate-fade-in">
+          <p className="text-lg text-gray-600">
             {locale === 'id' ? 'Temukan jawaban untuk pertanyaan umum tentang layanan kami' : 'Find answers to common questions about our services'}
           </p>
         </div>
-        <div className="animate-slide-up">
-          <FAQ items={faqItems} />
-        </div>
+        <FAQ items={faqItems} />
       </div>
     </section>
   );
@@ -468,29 +441,30 @@ function CTASection({ locale }: { locale: string }) {
   const t = useTranslations('cta');
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-24 sm:py-32">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-
-      {/* Animated Blobs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-
+    <section className="relative bg-blue-600 py-24">
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000"
+          alt="Modern city"
+          fill
+          className="object-cover opacity-20"
+        />
+      </div>
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade-in">
+          <h2 className="text-4xl font-bold tracking-tight text-white mb-6">
             {t('title')}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100 animate-fade-in">
+          <p className="text-xl text-blue-100 mb-10">
             {t('subtitle')}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in">
+          <div className="flex items-center justify-center gap-4">
             <Link
               href={`/${locale}/contact`}
-              className="group relative inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-lg hover:bg-gray-50 transition-colors"
             >
               <span>{t('button')}</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -505,9 +479,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <HeroSection locale={locale} />
+      <AboutSection locale={locale} />
       <ServicesSection locale={locale} />
       <WhyUsSection />
-      <TechStackSection />
       <ProcessSection />
       <FAQSection locale={locale} />
       <CTASection locale={locale} />

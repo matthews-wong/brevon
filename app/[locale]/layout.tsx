@@ -34,7 +34,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${jakartaSans.variable} font-sans antialiased bg-gray-900`}>
+      <body className={`${jakartaSans.variable} font-sans antialiased bg-white`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="min-h-screen">

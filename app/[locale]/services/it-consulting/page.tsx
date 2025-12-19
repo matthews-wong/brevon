@@ -54,6 +54,7 @@ export default async function ITConsultingPage({ params }: { params: Promise<{ l
         },
       ]}
       gradient="from-yellow-500 to-orange-500"
+      heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000"
     />
   );
 }

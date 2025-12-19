@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { Code, Palette, Zap, Shield, Sparkles, ArrowRight, Workflow, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
+import { Code, Palette, Zap, Shield, Sparkles, ArrowRight, Workflow, TrendingUp, CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -43,7 +44,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         t('itConsulting.features.3'),
       ],
       icon: Zap,
-      gradient: 'from-yellow-500 to-orange-500',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000',
       href: `/${locale}/services/it-consulting`,
     },
     {
@@ -56,7 +57,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         t('webDevelopment.features.3'),
       ],
       icon: Code,
-      gradient: 'from-blue-500 to-cyan-500',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000',
       href: `/${locale}/services/web-development`,
     },
     {
@@ -69,7 +70,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         t('systemIntegration.features.3'),
       ],
       icon: Workflow,
-      gradient: 'from-green-500 to-emerald-500',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000',
       href: `/${locale}/services/system-integration`,
     },
     {
@@ -82,7 +83,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         t('uiUx.features.3'),
       ],
       icon: Palette,
-      gradient: 'from-purple-500 to-pink-500',
+      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000',
       href: `/${locale}/services/ui-ux`,
     },
     {
@@ -95,7 +96,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         t('digitalMarketing.features.3'),
       ],
       icon: TrendingUp,
-      gradient: 'from-red-500 to-rose-500',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000',
       href: `/${locale}/services/digital-marketing`,
     },
   ];
@@ -103,74 +104,85 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-24 sm:py-32">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-          <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        </div>
+      <section className="relative bg-white">
+        <div className="relative h-[400px] lg:h-[500px]">
+          <Image
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000"
+            alt="Professional services"
+            fill
+            className="object-cover brightness-50"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/70"></div>
 
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-sm font-semibold text-blue-400 ring-1 ring-inset ring-blue-400/30 backdrop-blur-sm animate-fade-in">
-              <Sparkles className="h-4 w-4" />
-              <span>Our Expertise</span>
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8 h-full flex items-center">
+            <div className="max-w-3xl">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-600/20 px-4 py-2 text-sm font-semibold text-blue-300 backdrop-blur-sm border border-blue-500/30">
+                <Sparkles className="h-4 w-4" />
+                <span>Our Expertise</span>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6">
+                {t('title')}
+              </h1>
+              <p className="text-xl leading-8 text-gray-200 max-w-2xl">
+                {t('subtitle')}
+              </p>
             </div>
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">
-              {t('title')}
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-300 animate-fade-in">
-              {t('subtitle')}
-            </p>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 sm:py-32 bg-gray-900">
+      <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="space-y-24">
             {services.map((service, index) => (
               <div
                 key={service.name}
-                className={`group relative grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 ${
+                className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center ${
                   index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
               >
                 {/* Content */}
                 <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${service.gradient} shadow-xl shadow-${service.gradient.split('-')[1]}-500/50 mb-8`}>
+                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-blue-600 shadow-lg mb-8">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h2 className="text-4xl font-bold text-white mb-6">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-6">
                     {service.name}
                   </h2>
-                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                     {service.description}
                   </p>
+
+                  {/* Features List */}
+                  <ul className="space-y-4 mb-8">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-base text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
                   <Link
                     href={service.href}
-                    className="group/link inline-flex items-center gap-2 text-lg font-semibold text-blue-400 hover:text-blue-300 transition-colors w-fit"
+                    className="inline-flex items-center gap-2 text-base font-semibold text-blue-600 hover:text-blue-700 transition-colors w-fit"
                   >
                     Learn more
-                    <ArrowRight className="h-5 w-5 group-hover/link:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-5 w-5" />
                   </Link>
                 </div>
 
-                {/* Features */}
-                <div className={`flex flex-col ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="rounded-3xl bg-gray-800/50 backdrop-blur-sm p-8 border border-gray-700 hover:border-gray-600 transition-all hover:shadow-xl hover:shadow-blue-500/10">
-                    <h3 className="text-xl font-semibold text-white mb-6">Key Features</h3>
-                    <ul className="space-y-4">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-4 group/item">
-                          <div className={`mt-1 flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br ${service.gradient} flex-shrink-0 group-hover/item:scale-110 transition-transform`}>
-                            <div className="h-2 w-2 rounded-full bg-white"></div>
-                          </div>
-                          <span className="text-base text-gray-300 leading-relaxed">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                {/* Image */}
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -180,26 +192,31 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       </section>
 
       {/* CTA Section */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-24 sm:py-32">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <section className="relative bg-blue-600 py-24">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000"
+            alt="Modern city"
+            fill
+            className="object-cover opacity-20"
+          />
+        </div>
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tight text-white mb-6">
               Ready to get started?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+            <p className="text-xl text-blue-100 mb-10">
               Let's discuss how our services can help transform your business
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="flex items-center justify-center gap-4">
               <Link
                 href={`/${locale}/contact`}
-                className="group relative inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-base font-semibold text-blue-600 shadow-lg hover:bg-gray-50 transition-colors"
               >
                 <span>Contact Us</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
           </div>

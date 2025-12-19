@@ -54,6 +54,7 @@ export default async function WebDevelopmentPage({ params }: { params: Promise<{
         },
       ]}
       gradient="from-blue-500 to-cyan-500"
+      heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000"
     />
   );
 }

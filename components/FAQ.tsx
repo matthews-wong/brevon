@@ -24,17 +24,17 @@ export default function FAQ({ items }: FAQProps) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 overflow-hidden transition-all hover:border-gray-600"
+          className="rounded-xl bg-white border border-gray-200 overflow-hidden transition-all hover:border-blue-200 hover:shadow-lg"
         >
           <button
             onClick={() => toggleItem(index)}
-            className="w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-gray-800/70"
+            className="w-full flex items-center justify-between p-5 sm:p-6 text-left transition-colors hover:bg-gray-50"
           >
-            <span className="text-lg font-semibold text-white pr-8">
+            <span className="text-base sm:text-lg font-semibold text-gray-900 pr-8">
               {item.question}
             </span>
             <ChevronDown
-              className={`h-5 w-5 text-blue-400 flex-shrink-0 transition-transform duration-300 ${
+              className={`h-5 w-5 text-blue-600 flex-shrink-0 transition-transform duration-300 ${
                 openIndex === index ? 'rotate-180' : ''
               }`}
             />
@@ -46,7 +46,7 @@ export default function FAQ({ items }: FAQProps) {
                 : 'max-h-0 opacity-0'
             } overflow-hidden`}
           >
-            <div className="px-6 pb-6 text-gray-400 leading-relaxed">
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               {item.answer}
             </div>
           </div>
