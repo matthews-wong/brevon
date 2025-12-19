@@ -96,10 +96,10 @@ export default function Header() {
               <Link href={`/${locale}`} className="group flex items-center gap-2.5 -m-1.5 p-1.5">
                 {/* Logo Text */}
                 <div className="flex flex-col leading-none">
-                  <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+                  <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#1E3A5F] to-[#1E3A5F] bg-clip-text text-transparent">
                     Brevon
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-gray-600 tracking-wide">
+                  <span className="text-xs sm:text-sm font-semibold text-[#8E9297] tracking-wide">
                     SOLUTIONS
                   </span>
                 </div>
@@ -114,13 +114,13 @@ export default function Header() {
                   href={item.href}
                   className={`relative text-sm font-semibold leading-6 transition-all px-3 py-2 rounded-lg ${
                     isActive(item.href)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-[#1E3A5F] bg-[#1E3A5F]/10'
+                      : 'text-gray-700 hover:text-[#1E3A5F] hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></span>
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#1E3A5F] rounded-full"></span>
                   )}
                 </Link>
               ))}
@@ -134,7 +134,7 @@ export default function Header() {
             <div className="flex lg:hidden">
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all"
+                className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:text-[#1E3A5F] hover:bg-[#1E3A5F]/10 transition-all"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -193,7 +193,7 @@ export default function Header() {
                       href={item.href}
                       className={`group flex items-center rounded-2xl px-5 py-4 text-base font-semibold transition-all duration-200 ${
                         isActive(item.href)
-                          ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-600/30 scale-[1.02]'
+                          ? 'bg-gradient-to-r from-[#1E3A5F] to-[#1E3A5F] text-white shadow-lg shadow-[#1E3A5F]/30 scale-[1.02]'
                           : 'text-gray-700 hover:bg-white hover:shadow-md hover:scale-[1.01]'
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
@@ -229,8 +229,8 @@ export default function Header() {
                     }}
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-semibold transition-all ${
                       locale === 'en'
-                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-600/30'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+                        ? 'bg-gradient-to-r from-[#1E3A5F] to-[#1E3A5F] text-white shadow-lg shadow-[#1E3A5F]/30'
+                        : 'bg-gray-100 text-gray-700 hover:bg-[#1E3A5F]/10 hover:shadow-md'
                     }`}
                   >
                     <img 
@@ -247,8 +247,8 @@ export default function Header() {
                     }}
                     className={`flex-1 flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-semibold transition-all ${
                       locale === 'id'
-                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-600/30'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
+                        ? 'bg-gradient-to-r from-[#1E3A5F] to-[#1E3A5F] text-white shadow-lg shadow-[#1E3A5F]/30'
+                        : 'bg-gray-100 text-gray-700 hover:bg-[#1E3A5F]/10 hover:shadow-md'
                     }`}
                   >
                     <img 
